@@ -20,25 +20,25 @@ type Options struct {
 
 type Option func(*Options)
 
-func UID(userID int) Option {
+func WithUID(userID int) Option {
 	return func(args *Options) {
 		args.UID = userID
 	}
 }
 
-func GID(groupID int) Option {
+func WithGID(groupID int) Option {
 	return func(args *Options) {
 		args.GID = groupID
 	}
 }
 
-func Contents(c string) Option {
+func WithContents(c string) Option {
 	return func(args *Options) {
 		args.Contents = c
 	}
 }
 
-func Permissions(perms os.FileMode) Option {
+func WithPermissions(perms os.FileMode) Option {
 	return func(args *Options) {
 		args.Permissions = perms
 	}
@@ -87,7 +87,7 @@ if err != nil {
     panic(err)
 }
 
-fillerFile, err := file.New("/tmp/file.txt", file.UID(1000), file.Contents("Lorem Ipsum Dolor Amet"))
+fillerFile, err := file.New("/tmp/file.txt", file.WithUID(1000), file.WithContents("Lorem Ipsum Dolor Amet"))
 if err != nil {
     panic(err)
 }
