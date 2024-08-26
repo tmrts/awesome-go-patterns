@@ -28,7 +28,7 @@ A curated collection of idiomatic design & application patterns for Go language.
 | [Bridge](/structural/bridge.md) | Decouples an interface from its implementation so that the two can vary independently | ✘ |
 | [Composite](/structural/composite.md) | Encapsulates and provides access to a number of different objects | ✘ |
 | [Decorator](/structural/decorator.md) | Adds behavior to an object, statically or dynamically | ✔ |
-| [Facade](/structural/facade.md) | Uses one type as an API to a number of others | ✘ |
+| [Facade](/structural/facade.md) | Uses one type as an API to a number of others | ✔ |
 | [Flyweight](/structural/flyweight.md) | Reuses existing instances of objects with similar/identical state to minimize resource usage | ✘ |
 | [Proxy](/structural/proxy.md) | Provides a surrogate for an object to control it's actions | ✔ |
 
@@ -63,7 +63,7 @@ A curated collection of idiomatic design & application patterns for Go language.
 |:-------:|:----------- |:------:|
 | [N-Barrier](/concurrency/barrier.md) | Prevents a process from proceeding until all N processes reach to the barrier | ✘ |
 | [Bounded Parallelism](/concurrency/bounded_parallelism.md) | Completes large number of independent tasks with resource limits | ✔ |
-| [Broadcast](/concurrency/broadcast.md) | Transfers a message to all recipients simultaneously | ✘ |
+| [Broadcast](/concurrency/broadcast.md) | Transfers a message to all recipients simultaneously | ✔ |
 | [Coroutines](/concurrency/coroutine.md) | Subroutines that allow suspending and resuming execution at certain locations | ✘ |
 | [Generators](/concurrency/generator.md) | Yields a sequence of values one at a time | ✔ |
 | [Reactor](/concurrency/reactor.md) | Demultiplexes service requests delivered concurrently to a service handler and dispatches them syncronously to the associated request handlers | ✘ |
