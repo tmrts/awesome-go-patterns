@@ -4,7 +4,6 @@ import (
 	"crypto/md5"
 	"errors"
 	"fmt"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"sort"
@@ -50,7 +49,7 @@ type result struct {
 // files on c until either paths or done is closed.
 func digester(done <-chan struct{}, paths <-chan string, c chan<- result) {
 	for path := range paths { // HLpaths
-		data, err := ioutil.ReadFile(path)
+		data, err := os.ReadFile(path)
 		select {
 		case c <- result{path, md5.Sum(data), err}:
 		case <-done:
